@@ -71,7 +71,7 @@
     <!-- banner part start-->
 
     <!-- feature_part start-->
-    <section class="feature_part padding_top">
+    {{-- <section class="feature_part padding_top">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -115,7 +115,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- upcoming_event part start-->
 
     <!-- product_list part start-->
@@ -124,7 +124,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="section_tittle text-center">
-                        <h2>Awesome <span>shop</span></h2>
+                        <h2>Terbaru <span>shop</span></h2>
                     </div>
                 </div>
             </div>
@@ -132,13 +132,15 @@
                 <div class="col-lg-12">
                     <div class="best_product_slider owl-carousel">
                         @foreach ($produk as $p)
-                            <div class="single_product_item">
-                                <img src="{{ asset('/storage/uploads/' . $p->gambar_produk) }}" alt="">
-                                <div class="single_product_text">
-                                    <h4>{{ $p->nama_produk }}</h4>
-                                    <h3>Rp. {{ $p->harga }}</h3>
+                            <a href="{{ '/produk/detail/' . $p->id }}">
+                                <div class="single_product_item">
+                                    <img src="{{ asset('/storage/uploads/' . $p->gambar_produk) }}" alt="">
+                                    <div class="single_product_text">
+                                        <h4>{{ $p->nama_produk }}</h4>
+                                        <h3>Rp. {{ $p->harga }}</h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -148,7 +150,7 @@
     <!-- product_list part end-->
 
     <!-- awesome_shop start-->
-    <section class="our_offer section_padding">
+    {{-- <section class="our_offer section_padding">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6">
@@ -179,7 +181,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- awesome_shop part start-->
 
     <!-- product_list part start-->
@@ -238,7 +240,7 @@
     <!-- product_list part end-->
 
     <!-- subscribe_area part start-->
-    <section class="subscribe_area section_padding">
+    {{-- <section class="subscribe_area section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -257,11 +259,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--::subscribe_area part end::-->
 
     <!-- subscribe_area part start-->
-    <section class="client_logo padding_top">
+    {{-- <section class="client_logo padding_top">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -298,6 +300,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--::subscribe_area part end::-->
 @endsection

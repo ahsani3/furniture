@@ -17,7 +17,7 @@ use App\Http\Controllers\ProdukController as ControllersProdukController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/admin', function () {
     return view('admin.home', ['title' => 'Dashboard']);
@@ -26,7 +26,7 @@ Route::get('/admin', function () {
 Route::resource('admin/kategori', KategoriController::class);
 Route::resource('admin/produk', ProdukController::class);
 
-Route::get('/produk/{slug}', [ControllersProdukController::class, 'index']);
+Route::get('/produk/{slug?}', [ControllersProdukController::class, 'index'])->name('produk');
 Route::get('/produk/detail/{id}', [ControllersProdukController::class, 'show']);
 
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register')->middleware('guest');
